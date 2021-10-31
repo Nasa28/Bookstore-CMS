@@ -40,7 +40,7 @@ on your terminal.
 
 ## Live version
 
-[Live Version]()
+[Live Version](https://nasa-bookstore-cms.herokuapp.com/)
 
 ## Authors
 
