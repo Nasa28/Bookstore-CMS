@@ -1,11 +1,16 @@
-import './App.css';
+import '../styles/App.css';
+import BooksForm from '../containers/BooksForm';
+import BooksList from '../containers/BooksList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>hello Bookstore</h1>
-    </div>
+    <>
+      <div className="App">
+        <BooksList />
+        <BooksForm />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
