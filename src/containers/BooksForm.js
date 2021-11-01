@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 const BooksForm = () => {
   const options = [
@@ -10,6 +10,9 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
+  const [title, setTitle] = useState(options);
+  console.log(title);
+  console.log(setTitle);
   return (
     <div>
       <form>
