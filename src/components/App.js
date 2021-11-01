@@ -2,15 +2,13 @@ import '../styles/App.css';
 import BooksForm from '../containers/BooksForm';
 import BooksList from '../containers/BooksList';
 
-const App = () => {
-  return (
-    <>
-      <div className="App">
-        <BooksList />
-        <BooksForm />
-      </div>
-    </>
-  );
-};
+const App = () => (
+  <>
+    <div className="App">
+      <BooksForm />
+      <BooksList />
+    </div>
+  </>
+);
 
 export default App;

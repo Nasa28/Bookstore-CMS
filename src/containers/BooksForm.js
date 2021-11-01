@@ -15,18 +15,18 @@ const BooksForm = () => {
       <form>
         <div className="mb-3">
           <div className="form-group mb-3">
-            <label>
+            <label htmlFor="title">
               Title:
               <input type="text" name="title" className="form-control" />
             </label>
           </div>
 
           <div className="form-group mb-3">
-            <label>
+            <label htmlFor="category">
               Category:
-              <select className="form-control">
-                {options.map((option, index) => (
-                  <option key={index}>{option}</option>
+              <select className="form-control" name="category">
+                {options.map((option) => (
+                  <option key={option}>{option}</option>
                 ))}
               </select>
             </label>
