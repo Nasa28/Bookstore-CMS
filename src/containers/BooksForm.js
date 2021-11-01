@@ -1,5 +1,4 @@
 import React from 'react';
-import Select from 'react-select';
 
 const BooksForm = () => {
   const options = [
@@ -14,15 +13,26 @@ const BooksForm = () => {
   return (
     <div>
       <form>
-        <label>
-          Title:
-          <input type="text" name="title" />
-        </label>
-        <label>
-          Category:
-          <Select options={options} name="category" />
-        </label>
-        <input type="submit" value="Submit" />
+        <div className="mb-3">
+          <div className="form-group mb-3">
+            <label>
+              Title:
+              <input type="text" name="title" className="form-control" />
+            </label>
+          </div>
+
+          <div className="form-group mb-3">
+            <label>
+              Category:
+              <select className="form-control">
+                {options.map((option, index) => (
+                  <option key={index}>{option}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <input type="submit" value="Submit" />
+        </div>
       </form>
     </div>
   );
