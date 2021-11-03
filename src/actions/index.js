@@ -1,15 +1,17 @@
 import * as actions from './constants';
 
-export const CREATE_BOOK = (book) => ({
+export const createBook = (title, category) => ({
   type: actions.CREATE_BOOK,
   payload: {
-    book,
+    id: Math.floor(Math.random() * 101),
+    title,
+    category,
   },
 });
 
-export const REMOVE_BOOK = (book) => ({
+export const removeBook = (id) => ({
   type: actions.REMOVE_BOOK,
   payload: {
-    book,
+    id,
   },
 });

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => {
+const Book = (props) => {
+  const { book, handleRemoveBook } = props;
   const { id, title, category } = book;
 
   return (
@@ -9,6 +10,9 @@ const Book = ({ book }) => {
         <td>{id}</td>
         <td>{title}</td>
         <td>{category}</td>
+        <td>
+          <button onClick={handleRemoveBook}>Remove Book</button>
+        </td>
       </tr>
     </>
   );

@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import * as actions from '../actions/constants';
 
 const initialState = {
@@ -35,11 +34,11 @@ const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.CREATE_BOOK:
       return {
-        books: [...state, action.payload],
+        books: [...state.books, action.payload],
       };
     case actions.REMOVE_BOOK:
       return {
-        books: _.filter(state, (book) => book.id !== action.payload.id),
+        books: state.books.filter((book) => book.id !== action.payload.id),
       };
     default:
       return state;
