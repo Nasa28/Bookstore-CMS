@@ -11,7 +11,9 @@ const Book = (props) => {
         <td>{title}</td>
         <td>{category}</td>
         <td>
-          <button onClick={handleRemoveBook}>Remove Book</button>
+          <button onClick={handleRemoveBook} type="button">
+            Remove Book
+          </button>
         </td>
       </tr>
     </>
@@ -20,6 +22,7 @@ const Book = (props) => {
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.objectOf).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;

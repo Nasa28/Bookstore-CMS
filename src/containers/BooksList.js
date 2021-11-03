@@ -3,7 +3,7 @@ import Book from '../components/Book';
 import { removeBook } from '../actions';
 
 const BooksList = () => {
-  const bookList = useSelector((state) => state['book'].books);
+  const bookList = useSelector((state) => state.book.books);
   const dispatch = useDispatch();
   const handleRemoveBook = (id) => dispatch(removeBook(id));
   return (
@@ -15,7 +15,6 @@ const BooksList = () => {
               <th>id</th>
               <th>Title</th>
               <th>Category</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>

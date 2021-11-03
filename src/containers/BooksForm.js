@@ -57,7 +57,7 @@ const BooksForm = () => {
                 onChange={handleChange}
                 className="form-control"
                 name="category"
-                defaultValue={'DEFAULT'}
+                defaultValue="DEFAULT"
               >
                 <option value="DEFAULT" disabled>
                   Choose here
