@@ -26,12 +26,11 @@ const BooksForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (title && category) {
-      dispatch(createBook(title, category));
-      setTitle('');
-      setCategory(options[0]);
-      event.target.reset();
-    }
+
+    dispatch(createBook(title, category));
+    setTitle('');
+    setCategory(options[0]);
+    event.target.reset();
   };
   return (
     <div>

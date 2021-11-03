@@ -5,7 +5,7 @@ import { removeBook } from '../actions';
 const BooksList = () => {
   const bookList = useSelector((state) => state['book'].books);
   const dispatch = useDispatch();
-  const handleRemoveBook = (book) => dispatch(removeBook(book.id));
+  const handleRemoveBook = (id) => dispatch(removeBook(id));
   return (
     <>
       <div>
@@ -23,7 +23,7 @@ const BooksList = () => {
               <Book
                 key={book.id}
                 book={book}
-                handleRemoveBook={handleRemoveBook}
+                handleRemoveBook={() => handleRemoveBook(book.id)}
               />
             ))}
           </tbody>
