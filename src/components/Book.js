@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => {
+const Book = (props) => {
+  const { book, handleRemoveBook } = props;
   const { id, title, category } = book;
 
   return (
@@ -9,6 +10,11 @@ const Book = ({ book }) => {
         <td>{id}</td>
         <td>{title}</td>
         <td>{category}</td>
+        <td>
+          <button onClick={handleRemoveBook} type="button">
+            Remove Book
+          </button>
+        </td>
       </tr>
     </>
   );
@@ -16,6 +22,7 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.objectOf).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
