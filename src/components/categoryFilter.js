@@ -1,6 +1,5 @@
-import React from 'react';
-
-const categoryFilter = () => {
+const CategoryFilter = (props) => {
+  const { handleFilterChange } = props;
   const filters = [
     'All',
     'Action',
@@ -13,7 +12,7 @@ const categoryFilter = () => {
   ];
   return (
     <div>
-      <select onChange={handleChange} className="form-control" name="category">
+      <select onChange={handleFilterChange} name="filter">
         {filters.map((filter) => (
           <option name="category" value={filter} key={filter}>
             {filter}
@@ -24,4 +23,4 @@ const categoryFilter = () => {
   );
 };
 
-export default categoryFilter;
+export default CategoryFilter;

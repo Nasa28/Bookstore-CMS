@@ -1,9 +1,9 @@
 import * as actions from '../actions/constants';
 
-const filterReducer = (state = 'ALL', action) => {
+const filterReducer = (state = 'All', action) => {
   switch (action.type) {
     case actions.CHANGE_FILTER:
-      return action.payload;
+      return action.filter;
     default:
       return state;
   }

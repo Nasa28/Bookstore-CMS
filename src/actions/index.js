@@ -18,7 +18,6 @@ export const removeBook = (id) => ({
 
 export const changeFilter = (filter) => ({
   type: actions.CHANGE_FILTER,
-  payload: {
-    filter,
-  },
+
+  filter,
 });
