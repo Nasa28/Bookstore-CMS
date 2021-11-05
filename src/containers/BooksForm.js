@@ -12,8 +12,8 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
-  const [title, setTitle] = useState('');
-  const [category, setCategory] = useState(options[0]);
+  // const [title, setTitle] = useState('');
+  // const [category, setCategory] = useState(options[0]);
   const [book, setBook] = useState({
     title: '',
     category: options[0],
@@ -21,17 +21,13 @@ const BooksForm = () => {
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    const name = event.name;
-    const value = event.target.value;
-    setBook
+    const { name, value } = event.target;
+    setBook({ ...book, [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    dispatch(createBook(title, category));
-    setTitle('');
-    setCategory(options[0]);
+    dispatch(createBook(book.title, book.category));
     event.target.reset();
   };
   return (
@@ -42,7 +38,7 @@ const BooksForm = () => {
             <label htmlFor="title">
               Title:
               <input
-                value={title}
+                value={book.title}
                 onChange={handleChange}
                 type="text"
                 name="title"
