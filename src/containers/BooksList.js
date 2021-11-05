@@ -9,8 +9,9 @@ const BooksList = () => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = (id) => dispatch(removeBook(id));
+
   const filteredBooks = bookList.filter(
-    (book) => book.category === filter || filter === 'All'
+    (book) => book.category === filter || filter === 'All',
   );
 
   const handleFilterChange = (e) => {

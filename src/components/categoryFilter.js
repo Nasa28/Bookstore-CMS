@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const CategoryFilter = (props) => {
   const { handleFilterChange } = props;
   const filters = [
@@ -21,6 +23,10 @@ const CategoryFilter = (props) => {
       </select>
     </div>
   );
+};
+
+CategoryFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
