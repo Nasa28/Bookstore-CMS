@@ -14,14 +14,16 @@ const BooksForm = () => {
   ];
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState(options[0]);
+  const [book, setBook] = useState({
+    title: '',
+    category: options[0],
+  });
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    if (event.target.name === 'title') {
-      setTitle(event.target.value);
-    } else if (event.target.name === 'category') {
-      setCategory(event.target.value);
-    }
+    const name = event.name;
+    const value = event.target.value;
+    setBook
   };
 
   const handleSubmit = (event) => {
