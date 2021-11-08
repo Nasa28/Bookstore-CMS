@@ -24,12 +24,17 @@ const Book = (props) => {
             </button>
           </div>
         </div>
+
         <div className="circle">
-          <p className="round" />
-          {`${num}%`}
+          <div className="round" />
+          <div>
+            {`${num}%`}
+            <p className="completed">Completed</p>
+          </div>
         </div>
 
         <div className="update-progress">
+          <div className="divider" />
           <p className="current">CURRENT CHAPTER</p>
           <p className="chapter">Chapter No</p>
           <button type="button" className="update-btn">

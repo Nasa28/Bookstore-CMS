@@ -24,8 +24,8 @@
   color: #4386bf;
   padding-left: 0;
   font-family: Roboto, Helvetica, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 20px;
   padding-right: 40px;
 }
@@ -51,7 +51,8 @@
   width: 4.25rem;
   height: 4.25rem;
   margin-right: 20px;
-  border: 6px solid rgb(232, 232, 232);
+  border: 6px solid;
+  border-color: #307bbe #307bbe #e8e8e8 #e8e8e8;
   border-radius: 50%;
 }
 
