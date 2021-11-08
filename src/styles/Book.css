@@ -60,6 +60,10 @@
   color: rgb(12, 142, 250);
 }
 
+.user-icon {
+  margin-right: 6.5rem;
+}
+
 .update-btn {
   background-color: rgb(12, 142, 250);
   width: 11rem;
