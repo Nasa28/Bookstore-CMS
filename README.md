@@ -2,6 +2,8 @@
 
 > This is Bookstore app for Magic-books Inc. a fictional company based in Germany
 
+![screenshot](Readme.png)
+
 ## Built With
 
 - Node.js
@@ -37,10 +39,9 @@ on your terminal.
 - Open your prefered browser
 - Visit `http://localhost:3000/`
 
-
 ## Live version
 
-[Live Version](https://nasa-bookstore-cms.herokuapp.com/)
+[Live Version](https://mybookstore-cms.netlify.app/)
 
 ## Authors
 
