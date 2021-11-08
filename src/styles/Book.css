@@ -14,19 +14,25 @@
   letter-spacing: -0.2px;
 }
 
+.title,
+.btn,
+.author,
+.categories,
+.chapter {
+  font-weight: bold;
+}
+
 .btn,
 .author {
   border: none;
   color: #4386bf;
   padding-left: 0;
   font-size: 1rem;
-  font-weight: 600;
   margin-bottom: 20px;
   padding-right: 40px;
 }
 
 .categories {
-  font-weight: bold;
   font-size: 0.875rem;
   color: #888;
 }
@@ -80,7 +86,6 @@
 }
 
 .chapter {
-  font-weight: 600;
   margin-bottom: 1.3rem;
 }
 
