@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createBook } from '../actions/index';
+import '../styles/BookList.css';
 
 const BooksForm = () => {
   const options = [
@@ -12,8 +13,7 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
-  // const [title, setTitle] = useState('');
-  // const [category, setCategory] = useState(options[0]);
+
   const [book, setBook] = useState({
     title: '',
     category: options[0],
@@ -28,50 +28,48 @@ const BooksForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(createBook(book.title, book.category));
-    event.target.reset();
+    setBook({
+      title: '',
+      category: '',
+    });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <div className="form-group mb-3">
-            <label htmlFor="title">
-              Title:
-              <input
-                value={book.title}
-                onChange={handleChange}
-                type="text"
-                name="title"
-                className="form-control"
-                required
-              />
-            </label>
-          </div>
-
-          <div className="form-group mb-3">
-            <label htmlFor="category">
-              Category:
-              <select
-                onChange={handleChange}
-                className="form-control"
-                name="category"
-                defaultValue="DEFAULT"
-              >
-                <option value="DEFAULT" disabled>
-                  Choose here
-                </option>
-                {options.map((option) => (
-                  <option name="category" value={option} key={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
-    </div>
+    <>
+      <h3 className="form-title">ADD NEW BOOK</h3>
+      <div className="book-form">
+        <input
+          className="input"
+          value={book.title}
+          onChange={handleChange}
+          type="text"
+          name="title"
+          required
+          placeholder="Book title"
+        />
+        <select
+          onChange={handleChange}
+          name="category"
+          placeholder="Category"
+          defaultValue="DEFAULT"
+          className="options"
+        >
+          <option value="DEFAULT" disabled>
+            Category
+          </option>
+          {options.map((option) => (
+            <option name="category" value={option} key={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        <input
+          className="submit"
+          type="submit"
+          value="ADD BOOK"
+          onClick={handleSubmit}
+        />
+      </div>
+    </>
   );
 };
 

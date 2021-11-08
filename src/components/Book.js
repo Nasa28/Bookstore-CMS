@@ -1,21 +1,42 @@
 import PropTypes from 'prop-types';
+import '../styles/Book.css';
 
 const Book = (props) => {
   const { book, handleRemoveBook } = props;
-  const { id, title, category } = book;
-
+  const { title, category } = book;
+  const num = Math.floor(Math.random() * 90 + 10);
   return (
     <>
-      <tr>
-        <td>{id}</td>
-        <td>{title}</td>
-        <td>{category}</td>
-        <td>
-          <button onClick={handleRemoveBook} type="button">
-            Remove Book
+      <div className="main-div">
+        <div className="book-container">
+          <span className="categories">{category}</span>
+          <h3 className="title">{title}</h3>
+          <span className="author">Author</span>
+          <div className="btns">
+            <button className="btn" type="button">
+              Comments
+            </button>
+            <button className="btn" onClick={handleRemoveBook} type="button">
+              Remove
+            </button>
+            <button className="btn" type="button">
+              Edit
+            </button>
+          </div>
+        </div>
+        <div className="circle">
+          <p className="round" />
+          {`${num}%`}
+        </div>
+
+        <div className="update-progress">
+          <p className="current">CURRENT CHAPTER</p>
+          <p className="chapter">Chapter No</p>
+          <button type="button" className="update-btn">
+            Update Progress
           </button>
-        </td>
-      </tr>
+        </div>
+      </div>
     </>
   );
 };
