@@ -41,7 +41,7 @@ on your terminal.
 
 ## Live version
 
-[Live Version](https://nasa-bookstore-cms.herokuapp.com/)
+[Live Version](https://mybookstore-cms.netlify.app/)
 
 ## Authors
 
