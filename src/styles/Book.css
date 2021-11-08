@@ -9,7 +9,7 @@
 .title {
   height: 1.813rem;
   margin: 0.188rem 0 0 0;
-  font-family: RobotoSlab;
+  font-family: Roboto, Helvetica, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -61,6 +61,11 @@
 .user-icon {
   color: rgb(12, 142, 250);
 }
+
+.logo-title {
+  font-weight: 700;
+}
+
 .update-btn {
   background-color: rgb(12, 142, 250);
   width: 11rem;

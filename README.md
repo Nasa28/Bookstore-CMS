@@ -2,6 +2,8 @@
 
 > This is Bookstore app for Magic-books Inc. a fictional company based in Germany
 
+![screenshot](Readme.png)
+
 ## Built With
 
 - Node.js
@@ -36,7 +38,6 @@ on your terminal.
 - Run `npm start` to start the server
 - Open your prefered browser
 - Visit `http://localhost:3000/`
-
 
 ## Live version
 
