@@ -87,7 +87,6 @@ nav h1 {
 
 .submit {
   width: 11rem;
-  margin-right: 6.25rem;
   background-color: rgb(12, 142, 250);
   border-style: none;
   border-radius: 3px;
@@ -98,4 +97,17 @@ nav h1 {
   width: 0.125rem;
   height: 4.375rem;
   border: solid 1px #e8e8e8;
+}
+
+.link-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  border: solid 1px #e8e8e8;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.divide {
+  display: flex;
+  align-items: center;
 }
